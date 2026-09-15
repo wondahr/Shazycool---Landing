@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Shazycool — Afro Artist | New Single Out Now</title>
+<meta name="description" content="Shazycool is an Afro artist blending Afrobeats and Afro-fusion. Stream the new single and book Shazycool for festivals, clubs, and private events." />
+<meta name="theme-color" content="#0b0b0b" />
+<meta name="author" content="Shazycool" />
+<link rel="canonical" href="https://shazycool.com/" />
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shazycool — Afro Artist" />
+<meta property="og:description" content="New single out now. Stream it and book Shazycool for your event." />
+<meta property="og:image" content="https://shazycool.com/assets/share.jpg" />
+<meta property="og:url" content="https://shazycool.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Shazycool — Afro Artist" />
+<meta name="twitter:description" content="New single out now. Stream it and book Shazycool." />
+<meta name="twitter:image" content="https://shazycool.com/assets/share.jpg" />
+
+<!-- Favicon (inline SVG — no file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0b0b'/><text x='50' y='72' font-size='62' font-family='Arial' font-weight='bold' fill='%23e8b23a' text-anchor='middle'>S</text></svg>" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Shazycool",
+  "genre": ["Afrobeats", "Afro-fusion"],
+  "url": "https://shazycool.com",
+  "email": "booking@shazycool.com",
+  "image": "https://shazycool.com/assets/share.jpg",
+  "description": "Afro artist blending Afrobeats and Afro-fusion. Available for bookings worldwide.",
+  "sameAs": [
+    "https://instagram.com/shazycool",
+    "https://tiktok.com/@shazycool",
+    "https://youtube.com/@shazycool",
+    "https://open.spotify.com/artist/REPLACE"
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   1. TOKENS
+   ============================================================ */
+:root{
+  --bg:        #0b0b0b;
+  --bg-2:      #121212;
+  --card:      #161616;
+  --line:      #262626;
+  --text:      #f4f1ec;
+  --muted:     #9a968f;
+  --gold:      #e8b23a;
+  --terracotta:#c1440e;
+  --green:     #12463a;
+
+  --display: 'Anton', Impact, sans-serif;
+  --body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius: 14px;
+  --maxw: 1080px;
+  --pad: clamp(20px, 5vw, 48px);
+}
+
+/* ============================================================
+   2. RESET / BASE
+   ============================================================ */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; scroll-padding-top:76px; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3{ font-family:var(--display); font-weight:400; line-height:1.02; letter-spacing:.5px; margin:0; text-transform:uppercase; }
+h1{ font-size:clamp(3rem, 12vw, 7rem); }
+h2{ font-size:clamp(2rem, 6vw, 3.4rem); }
+h3{ font-size:clamp(1.3rem, 3.5vw, 1.8rem); }
+p{ margin:0 0 1rem; }
+:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; border-radius:4px; }
+
+.wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
+.section{ padding: clamp(64px, 10vw, 120px) 0; }
+.section--alt{ background:var(--bg-2); border-block:1px solid var(--line); }
+
+.eyebrow{
+  font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold); font-weight:600; margin-bottom:14px; display:block;
+}
+.lead{ color:var(--muted); max-width:62ch; font-size:1.02rem; }
+
+/* ============================================================
+   3. BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:15px 30px; border-radius:999px; border:1px solid transparent;
+  font-family:var(--body); font-weight:700; font-size:.9rem;
+  letter-spacing:.06em; text-transform:uppercase; cursor:pointer;
+  transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  white-space:nowrap;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn:active{ transform:translateY(0); }
+.btn--gold{ background:var(--gold); color:#0b0b0b; }
+.btn--gold:hover{ background:#f5c451; }
+.btn--ghost{ background:transparent; color:var(--text); border-color:#3a3a3a; }
+.btn--ghost:hover{ border-color:var(--gold); color:var(--gold); }
+.btn--block{ width:100%; }
+.btn:disabled{ opacity:.6; cursor:wait; transform:none; }
+
+/* ============================================================
+   4. NAV
+   ============================================================ */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:100;
+  transition:background .25s ease, backdrop-filter .25s ease, border-color .25s ease;
+  border-bottom:1px solid transparent;
+}
+.nav.is-scrolled{
+  background:rgba(11,11,11,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom-color:var(--line);
+}
+.nav__inner{
+  max-width:var(--maxw); margin-inline:auto; padding:16px var(--pad);
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+}
+.nav__logo{ font-family:var(--display); font-size:1.35rem; letter-spacing:1.5px; }
+.nav__logo span{ color:var(--gold); }
+.nav__links{ display:flex; align-items:center; gap:28px; }
+.nav__links a{
+  font-size:.82rem; letter-spacing:.12em; text-transform:uppercase;
+  font-weight:600; color:var(--muted); transition:color .18s ease;
+}
+.nav__links a:hover{ color:var(--gold); }
+.nav__cta{ padding:11px 22px; font-size:.78rem; }
+
+.nav__toggle{
+  display:none; background:none; border:0; cursor:pointer;
+  padding:8px; width:44px; height:44px; position:relative;
+}
+.nav__toggle span{
+  position:absolute; left:10px; right:10px; height:2px; background:var(--text);
+  border-radius:2px; transition:transform .25s ease, opacity .2s ease;
+}
+.nav__toggle span:nth-child(1){ top:15px; }
+.nav__toggle span:nth-child(2){ top:21px; }
+.nav__toggle span:nth-child(3){ top:27px; }
+.nav__toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+.nav__toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.nav__toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+
+/* ============================================================
+   5. HERO
+   ============================================================ */
+.hero{
+  position:relative; min-height:100svh; display:flex; align-items:flex-end;
+  padding:140px 0 clamp(48px,8vw,90px);
+  overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 80% 8%, rgba(232,178,58,.20) 0%, transparent 55%),
+    radial-gradient(90% 70% at 8% 92%, rgba(193,68,14,.24) 0%, transparent 60%),
+    linear-gradient(180deg, #0b0b0b 0%, #0e0d0b 55%, #0b0b0b 100%);
+}
+.hero__img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center 25%;
+  opacity:.42; filter:grayscale(.25) contrast(1.05);
+  z-index:0;
+}
+.hero::after{
+  content:""; position:absolute; inset:0; z-index:1;
+  background:linear-gradient(180deg, rgba(11,11,11,.55) 0%, rgba(11,11,11,.35) 40%, rgba(11,11,11,.96) 100%);
+}
+.hero .wrap{ position:relative; z-index:2; }
+.hero__tag{
+  display:inline-flex; align-items:center; gap:9px;
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600;
+  color:var(--text); background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
+  padding:8px 16px; border-radius:999px; margin-bottom:22px;
+  backdrop-filter:blur(8px);
+}
+.hero__dot{
+  width:7px; height:7px; border-radius:50%; background:var(--gold);
+  animation:pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse{ 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.45; transform:scale(.75); } }
+
+.hero h1{ margin-bottom:14px; text-shadow:0 6px 40px rgba(0,0,0,.6); }
+.hero h1 em{ font-style:normal; color:var(--gold); }
+.hero__sub{
+  font-size:clamp(1rem,2.4vw,1.2rem); color:#d9d4cc; max-width:52ch;
+  margin:0 0 32px;
+}
+.hero__actions{ display:flex; flex-wrap:wrap; gap:14px; }
+
+.hero__scroll{
+  position:absolute; right:var(--pad); bottom:34px; z-index:2;
+  writing-mode:vertical-rl; font-size:.68rem; letter-spacing:.28em;
+  text-transform:uppercase; color:var(--muted);
+  display:flex; align-items:center; gap:12px;
+}
+.hero__scroll::after{
+  content:""; width:1px; height:52px;
+  background:linear-gradient(180deg, var(--gold), transparent);
+}
+
+/* ============================================================
+   6. STREAM BAR
+   ============================================================ */
+.platforms{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+  gap:12px; margin-top:36px;
+}
+.platform{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding:18px 20px; background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); font-weight:600; font-size:.88rem;
+  letter-spacing:.04em; transition:border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.platform:hover{ border-color:var(--gold); transform:translateY(-3px); background:#1c1a15; }
+.platform svg{ width:15px; height:15px; stroke:var(--gold); fill:none; stroke-width:2.2; flex:none; }
+
+/* ============================================================
+   7. ABOUT
+   ============================================================ */
+.about{
+  display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(32px,6vw,72px); align-items:center;
+}
+.about__media{ position:relative; border-radius:var(--radius); overflow:hidden; }
+.about__media img{ width:100%; aspect-ratio:4/5; object-fit:cover; }
+.about__media::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, transparent 55%, rgba(193,68,14,.32));
+  pointer-events:none;
+}
+.about__stats{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+  margin-top:28px; padding-top:26px; border-top:1px solid var(--line);
+}
+.stat b{ display:block; font-family:var(--display); font-size:1.7rem; color:var(--gold); }
+.stat span{ font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+
+/* ============================================================
+   8. MUSIC
+   ============================================================ */
+.embed{
+  border-radius:var(--radius); overflow:hidden; background:var(--card);
+  border:1px solid var(--line); margin-top:32px;
+}
+.embed iframe{ display:block; width:100%; border:0; }
+.embed--spotify iframe{ height:352px; }
+.embed--video iframe{ aspect-ratio:16/9; height:auto; }
+
+/* ============================================================
+   9. BOOKING
+   ============================================================ */
+.book{
+  display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(32px,6vw,64px);
+  align-items:start;
+}
+.book__list{ list-style:none; padding:0; margin:24px 0 0; }
+.book__list li{
+  display:flex; gap:12px; padding:13px 0; border-bottom:1px solid var(--line);
+  font-size:.94rem; color:#cfcac2;
+}
+.book__list li::before{ content:"◆"; color:var(--gold); font-size:.7rem; line-height:1.9; }
+
+.form{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:clamp(22px,4vw,34px);
+}
+.field{ margin-bottom:16px; }
+.field label{
+  display:block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); font-weight:600; margin-bottom:7px;
+}
+.field input, .field select, .field textarea{
+  width:100%; padding:13px 15px; background:#0e0e0e; color:var(--text);
+  border:1px solid var(--line); border-radius:10px;
+  font-family:var(--body); font-size:.95rem; transition:border-color .18s ease;
+}
+.field textarea{ resize:vertical; min-height:104px; }
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none; border-color:var(--gold);
+}
+.field input::placeholder, .field textarea::placeholder{ color:#5e5a54; }
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:0 16px; }
+
+.form__note{ font-size:.78rem; color:var(--muted); margin:14px 0 0; text-align:center; }
+.form__status{
+  margin-top:14px; font-size:.86rem; padding:12px 16px; border-radius:10px;
+  display:none; text-align:center;
+}
+.form__status.is-ok{ display:block; background:rgba(18,70,58,.4); border:1px solid var(--green); color:#8fe3c4; }
+.form__status.is-err{ display:block; background:rgba(193,68,14,.18); border:1px solid var(--terracotta); color:#f0a382; }
+
+/* ============================================================
+   10. PRESS KIT + SIGNUP
+   ============================================================ */
+.press{
+  display:flex; flex-wrap:wrap; gap:14px; margin-top:28px;
+}
+.press a{
+  flex:1 1 200px; display:flex; align-items:center; gap:12px;
+  padding:18px 20px; background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); font-size:.9rem; font-weight:600;
+  transition:border-color .18s ease, transform .18s ease;
+}
+.press a:hover{ border-color:var(--gold); transform:translateY(-3px); }
+.press a small{ display:block; font-weight:400; font-size:.74rem; color:var(--muted); letter-spacing:.04em; }
+
+.signup{
+  background:linear-gradient(135deg, var(--green) 0%, #0b0b0b 65%);
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:clamp(30px,6vw,54px); text-align:center; margin-top:8px;
+}
+.signup h2{ margin-bottom:12px; }
+.signup p{ color:#c8c4bc; max-width:46ch; margin-inline:auto; }
+.signup form{
+  display:flex; gap:10px; max-width:480px; margin:26px auto 0; flex-wrap:wrap;
+}
+.signup input{
+  flex:1 1 220px; padding:15px 18px; border-radius:999px;
+  background:rgba(0,0,0,.45); border:1px solid #333; color:var(--text);
+  font-family:var(--body); font-size:.95rem;
+}
+.signup input:focus{ outline:none; border-color:var(--gold); }
+.signup input::placeholder{ color:#6e6a64; }
+
+/* ============================================================
+   11. FOOTER
+   ============================================================ */
+.footer{ border-top:1px solid var(--line); padding:56px 0 40px; background:var(--bg-2); }
+.footer__top{
+  display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between;
+  align-items:flex-start; margin-bottom:40px;
+}
+.footer__brand{ font-family:var(--display); font-size:2rem; letter-spacing:1.5px; }
+.footer__brand span{ color:var(--gold); }
+.footer__tag{ color:var(--muted); font-size:.86rem; max-width:34ch; margin-top:8px; }
+.socials{ display:flex; flex-wrap:wrap; gap:10px; }
+.socials a{
+  padding:10px 18px; border:1px solid var(--line); border-radius:999px;
+  font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+  color:var(--muted); transition:all .18s ease;
+}
+.socials a:hover{ color:var(--gold); border-color:var(--gold); }
+.footer__bottom{
+  display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between;
+  padding-top:26px; border-top:1px solid var(--line);
+  font-size:.78rem; color:var(--muted);
+}
+.copy-email{
+  background:none; border:0; color:var(--gold); cursor:pointer;
+  font-family:var(--body); font-size:.78rem; font-weight:600;
+  letter-spacing:.06em; padding:0;
+}
+.copy-email:hover{ text-decoration:underline; }
+
+/* ============================================================
+   12. BACK TO TOP
+   ============================================================ */
+.totop{
+  position:fixed; right:20px; bottom:20px; z-index:90;
+  width:48px; height:48px; border-radius:50%;
+  background:var(--gold); color:#0b0b0b; border:0; cursor:pointer;
+  display:grid; place-items:center;
+  opacity:0; visibility:hidden; transform:translateY(14px);
+  transition:all .25s ease; box-shadow:0 8px 26px rgba(0,0,0,.5);
+}
+.totop.is-visible{ opacity:1; visibility:visible; transform:translateY(0); }
+.totop:hover{ background:#f5c451; }
+
+/* ============================================================
+   13. SCROLL REVEAL
+   ============================================================ */
+.reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.is-in{ opacity:1; transform:none; }
+
+/* ============================================================
+   14. RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px){
+  .about, .book{ grid-template-columns:1fr; }
+  .about__media{ order:-1; }
+  .hero__scroll{ display:none; }
+}
+@media (max-width: 720px){
+  .nav__toggle{ display:block; }
+  .nav__links{
+    position:fixed; inset:64px 0 auto 0;
+    flex-direction:column; align-items:stretch; gap:0;
+    background:rgba(11,11,11,.98);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+    padding:8px var(--pad) 24px;
+    transform:translateY(-120%);
+    transition:transform .32s cubic-bezier(.4,0,.2,1);
+    max-height:calc(100svh - 64px); overflow-y:auto;
+  }
+  .nav__links.is-open{ transform:translateY(0); }
+  .nav__links a{
+    padding:16px 0; border-bottom:1px solid var(--line); font-size:.95rem;
+  }
+  .nav__links .nav__cta{
+    margin-top:18px; border-bottom:0; text-align:center; justify-content:center;
+  }
+  .grid-2{ grid-template-columns:1fr; }
+  .hero__actions .btn{ flex:1 1 100%; }
+  .about__stats{ grid-template-columns:1fr; gap:12px; text-align:center; }
+  .embed--spotify iframe{ height:420px; }
+}
+@media (max-width: 400px){
+  .btn{ padding:14px 22px; font-size:.82rem; }
+}
+
+/* ============================================================
+   15. ACCESSIBILITY
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{
+    animation-duration:.001ms !important;
+    transition-duration:.001ms !important;
+  }
+  .reveal{ opacity:1; transform:none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">SHAZY<span>COOL</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#music">Music</a>
+      <a href="#about">About</a>
+      <a href="#booking">Bookings</a>
+      <a href="#press">Press Kit</a>
+      <a href="#join">Join</a>
+      <a href="#booking" class="btn btn--gold nav__cta">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home">
+  <img src="assets/hero.jpg" alt="Shazycool performing live" class="hero__img"
+       onerror="this.style.display='none'" />
+
+  <div class="wrap">
+    <span class="hero__tag"><i class="hero__dot"></i> New single out now</span>
+
+    <h1>Shazy<em>cool</em></h1>
+
+    <p class="hero__sub">
+      Afro artist from Lagos. Afrobeats, Afro-fusion, and heavy rhythm —
+      built for the club, the car, and the late night.
+    </p>
+
+    <div class="hero__actions">
+      <a href="#music" class="btn btn--gold">▶ Stream Now</a>
+      <a href="#booking" class="btn btn--ghost">Book Shazycool</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll">Scroll</div>
+</section>
+
+
+<!-- ============================================================
+     STREAM PLATFORMS
+     ============================================================ -->
+<section class="section section--alt">
+  <div class="wrap">
+    <span class="eyebrow">Pick your platform</span>
+    <h2>Stream the new single</h2>
+    <p class="lead">Available everywhere. Tap your platform and press play.</p>
+
+    <!-- ⚠️ Replace every # with your real profile/song links -->
+    <div class="platforms">
+      <a class="platform" href="#" target="_blank" rel="noopener">
+        Spotify
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="platform" href="#" target="_blank" rel="noopener">
+        Apple Music
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="platform" href="#" target="_blank" rel="noopener">
+        Audiomack
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="platform" href="#" target="_blank" rel="noopener">
+        Boomplay
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="platform" href="#" target="_blank" rel="noopener">
+        YouTube
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MUSIC EMBEDS
+     ============================================================ -->
+<section class="section" id="music">
+  <div class="wrap">
+    <span class="eyebrow">The music</span>
+    <h2>Listen to the latest</h2>
+    <p class="lead">The newest drop, right here. No redirects, no searching.</p>
+
+    <!-- SPOTIFY EMBED — replace REPLACE_WITH_TRACK_ID -->
+    <div class="embed embed--spotify reveal">
+      <iframe
+        src="https://open.spotify.com/embed/track/REPLACE_WITH_TRACK_ID?theme=0"
+        title="Shazycool on Spotify"
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+
+    <!-- YOUTUBE EMBED — replace REPLACE_WITH_VIDEO_ID -->
+    <div class="embed embed--video reveal" style="margin-top:22px;">
+      <iframe
+        src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
+        title="Shazycool — official video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="section section--alt" id="about">
+  <div class="wrap about">
+    <div class="reveal">
+      <span class="eyebrow">The sound</span>
+      <h2>Built for movement</h2>
+      <p class="lead">
+        Shazycool makes Afro music that lives between the speakers and the dance floor —
+        blending Afrobeats, Afro-fusion, and amapiano into melodic hooks and heavy rhythm.
+      </p>
+      <p class="lead">
+        From Lagos to wherever the crowd is, Shazycool is building a sound for clubs,
+        late nights, and good energy. New music is on the way.
+      </p>
+
+      <div class="about__stats">
+        <div class="stat"><b>2026</b><span>New single</span></div>
+        <div class="stat"><b>Afro</b><span>Genre</span></div>
+        <div class="stat"><b>Lagos</b><span>Based in</span></div>
+      </div>
+    </div>
+
+    <div class="about__media reveal">
+      <img src="assets/about.jpg" alt="Shazycool portrait"
+           onerror="this.style.background='linear-gradient(135deg,#12463a,#c1440e)';this.removeAttribute('src');" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BOOKING
+     ============================================================ -->
+<section class="section" id="booking">
+  <div class="wrap book">
+    <div class="reveal">
+      <span class="eyebrow">Bookings</span>
+      <h2>Book Shazycool</h2>
+      <p class="lead">
+        Available for festivals, clubs, private events, weddings, showcases,
+        radio, and TV. Features and collaborations welcome.
+      </p>
+
+      <ul class="book__list">
+        <li>Festivals &amp; live shows</li>
+        <li>Club &amp; party appearances</li>
+        <li>Private events &amp; weddings</li>
+        <li>Features &amp; collaborations</li>
+        <li>Radio, TV &amp; interviews</li>
+      </ul>
+
+      <p style="margin-top:26px;">
+        <strong>Direct:</strong>
+        <a href="mailto:booking@shazycool.com" style="color:var(--gold);">booking@shazycool.com</a>
+      </p>
+    </div>
+
+    <!-- ⚠️ Replace YOUR_FORM_ID with your Formspree booking form ID -->
+    <form class="form reveal" id="bookingForm"
+          action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+
+      <h3 style="margin-bottom:22px;">Send a booking request</h3>
+
+      <div class="field">
+        <label for="bk-name">Your name *</label>
+        <input type="text" id="bk-name" name="name" placeholder="Full name" required />
+      </div>
+
+      <div class="field">
+        <label for="bk-email">Email *</label>
+        <input type="email" id="bk-email" name="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label for="bk-type">Event type</label>
+          <select id="bk-type" name="event_type">
+            <option value="">Select…</option>
+            <option>Festival</option>
+            <option>Club / Party</option>
+            <option>Private Event</option>
+            <option>Wedding</option>
+            <option>Showcase</option>
+            <option>Feature / Collab</option>
+            <option>Radio / TV</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="bk-date">Event date</label>
+          <input type="date" id="bk-date" name="event_date" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label for="bk-city">City / Country</label>
+          <input type="text" id="bk-city" name="location" placeholder="Lagos, Nigeria" />
+        </div>
+
+        <div class="field">
+          <label for="bk-budget">Budget range</label>
+          <input type="text" id="bk-budget" name="budget" placeholder="Optional" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="bk-msg">Details</label>
+        <textarea id="bk-msg" name="message" placeholder="Venue, set length, audience size, anything else we should know."></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="New booking request — shazycool.com" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <button type="submit" class="btn btn--gold btn--block" id="bkSubmit">Send Request</button>
+
+      <p class="form__note">We reply to serious enquiries within 48 hours.</p>
+      <div class="form__status" id="bkStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRESS KIT
+     ============================================================ -->
+<section class="section section--alt" id="press">
+  <div class="wrap">
+    <span class="eyebrow">For promoters &amp; media</span>
+    <h2>Press kit</h2>
+    <p class="lead">Everything you need to write about, book, or feature Shazycool.</p>
+
+    <!-- ⚠️ Replace # with your Google Drive share links -->
+    <div class="press">
+      <a href="#" target="_blank" rel="noopener">
+        📄 <span>Short Bio<small>PDF, one page</small></span>
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        🖼️ <span>Hi-Res Photos<small>Press-ready JPG</small></span>
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        🎧 <span>Music Catalogue<small>All releases</small></span>
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        📋 <span>Tech Rider<small>Stage &amp; sound</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EMAIL SIGNUP
+     ============================================================ -->
+<section class="section" id="join">
+  <div class="wrap">
+    <div class="signup reveal">
+      <span class="eyebrow">The list</span>
+      <h2>Get new music first</h2>
+      <p>Drops, show dates, and behind-the-scenes. No spam, ever.</p>
+
+      <!-- ⚠️ Replace YOUR_LIST_FORM_ID with a second Formspree form ID -->
+      <form id="listForm" action="https://formspree.io/f/YOUR_LIST_FORM_ID" method="POST" novalidate>
+        <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
+        <input type="hidden" name="_subject" value="New mailing list signup — shazycool.com" />
+        <button type="submit" class="btn btn--gold">Join</button>
+      </form>
+
+      <div class="form__status" id="listStatus" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">SHAZY<span>COOL</span></div>
+        <p class="footer__tag">Afro artist. New music out now. Available for bookings worldwide.</p>
+      </div>
+
+      <!-- ⚠️ Replace # with your real social links -->
+      <nav class="socials" aria-label="Social links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Spotify</a>
+        <a href="#" target="_blank" rel="noopener">Apple Music</a>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Shazycool. All rights reserved.</span>
+      <button class="copy-email" id="copyEmail" data-email="booking@shazycool.com">
+        📋 Copy booking email
+      </button>
+    </div>
+  </div>
+</footer>
+
+
+<button class="totop" id="toTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+
+<script>
+/* ============================================================
+   SHAZYCOOL — LANDING PAGE JS
+   ============================================================ */
+(function () {
+  'use strict';
+
+  const $  = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  /* ----------------------------------------------------------
+     1. MOBILE NAV
+     ---------------------------------------------------------- */
+  const nav       = $('#nav');
+  const navToggle = $('#navToggle');
+  const navLinks  = $('#navLinks');
+
+  function closeNav() {
+    navLinks.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  $$('a', navLinks).forEach(link => link.addEventListener('click', closeNav));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  /* ----------------------------------------------------------
+     2. STICKY NAV + BACK TO TOP
+     ---------------------------------------------------------- */
+  const toTop = $('#toTop');
+  let ticking = false;
+
+  function onScroll() {
+    const y = window.scrollY;
+    nav.classList.toggle('is-scrolled', y > 40);
+    toTop.classList.toggle('is-visible', y > 700);
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  onScroll();
+
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ----------------------------------------------------------
+     3. SCROLL REVEAL
+     ---------------------------------------------------------- */
+  const revealEls = $$('.reveal');
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-in'));
+  }
+
+  /* ----------------------------------------------------------
+     4. AUTO YEAR
+     ---------------------------------------------------------- */
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ----------------------------------------------------------
+     5. COPY BOOKING EMAIL
+     ---------------------------------------------------------- */
+  const copyBtn = $('#copyEmail');
+
+  copyBtn.addEventListener('click', async () => {
+    const email = copyBtn.dataset.email;
+    try {
+      await navigator.clipboard.writeText(email);
+      copyBtn.textContent = '✓ Copied!';
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = email;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+      copyBtn.textContent = '✓ Copied!';
+    }
+    setTimeout(() => {
+      copyBtn.textContent = '📋 Copy booking email';
+    }, 2000);
+  });
+
+  /* ----------------------------------------------------------
+     6. AJAX FORM HANDLER (Formspree)
+     ---------------------------------------------------------- */
+  function handleForm(formId, statusId, buttonId, successMsg) {
+    const form   = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+    if (!form) return;
+
+    const button = buttonId ? document.getElementById(buttonId) : null;
+    const originalText = button ? button.textContent : '';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      status.className = 'form__status';
+      status.textContent = '';
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Sending…';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          status.className = 'form__status is-ok';
+          status.textContent = successMsg;
+        } else {
+          const data = await response.json().catch(() => ({}));
+          status.className = 'form__status is-err';
+          status.textContent =
+            (data.errors && data.errors[0] && data.errors[0].message) ||
+            'Something went wrong. Please email booking@shazycool.com';
+        }
+      } catch {
+        status.className = 'form__status is-err';
+        status.textContent = 'Network error. Please email booking@shazycool.com';
+      } finally {
+        if (button) {
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      }
+    });
+  }
+
+  handleForm('bookingForm', 'bkStatus', 'bkSubmit',
+    '✓ Request sent! We’ll get back to you within 48 hours.');
+
+  handleForm('listForm', 'listStatus', null,
+    '✓ You’re on the list. New music coming your way.');
+
+  /* ----------------------------------------------------------
+     7. SMOOTH SCROLL FALLBACK
+     ---------------------------------------------------------- */
+  if (!('scrollBehavior' in document.documentElement.style)) {
+    $$('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        window.scrollTo(0, target.offsetTop - 70);
+      });
+    });
+  }
+
+})();
+</script>
+
+</body>
+</html>
